@@ -33,5 +33,4 @@ if [ ! -d "logs" ]; then
 fi
 
 
-pip install {setup_whl_file}
 pip install -r requirements.txt
