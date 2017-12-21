@@ -1,0 +1,10 @@
+{
+  "name": "{app_name} API",
+  "version": "0.1.0",
+  "description": "An introduction for {app_name} api",
+  "title": "{app_name} API",
+  "url" : "http://localhost:{port}/",
+  "template":{
+  	"withGenerator": false
+  }
+}

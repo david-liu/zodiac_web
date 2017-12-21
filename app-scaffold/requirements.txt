@@ -1,0 +1,5 @@
+gevent
+rainbow_logging_handler
+gunicorn==19.7.1
+flask
+python-json-logger

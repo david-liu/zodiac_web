@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# Copyright 2015 The IBM Authors. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# ==============================================================================
+IMAGE_NAME=gbsc/{app_name}
+
+echo "1. remove all container of image: $IMAGE_NAME"
+docker ps -a | awk '{ print $1,$2 }' | grep $IMAGE_NAME | awk '{print $1 }' | xargs -I {} docker rm -f {}
+echo ""
+
+echo "2. remove image: $IMAGE_NAME"
+docker rmi $IMAGE_NAME
+echo ""
+
+echo "3. rebuild image [$IMAGE_NAME] with model path: $1"
+docker build  -t $IMAGE_NAME -f scripts/Dockerfile .
+echo ""

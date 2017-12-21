@@ -1,0 +1,37 @@
+#!/bin/sh
+
+command_exists () {
+    type "$1" &> /dev/null ;
+}
+
+if ! command_exists virtualenv ; then
+   echo 'installl viretualenv'
+   pip install virtualenv
+fi
+
+if ! command_exists apidoc ; then
+   echo 'installl apidoc'
+   npm install apidoc -g
+fi
+
+VENV=".env"
+if [ ! -d "$VENV" ]; then
+
+  # Control will enter here if $DIRECTORY exists.
+  echo "build virtual python environment: $VENV"
+	
+  virtualenv --system-site-packages "$VENV"
+fi
+
+echo "active ${VENV}/bin/activate"
+source "${VENV}/bin/activate"
+
+if [ ! -d "logs" ]; then
+	echo "create logs directory"
+
+	mkdir logs
+fi
+
+
+pip install {setup_whl_file}
+pip install -r requirements.txt
