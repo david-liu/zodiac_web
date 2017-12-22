@@ -5,7 +5,7 @@ A Python Web generator, which aims to help user deploying his code as a web apop
 
 zodiac_web is built on python 2.7, before you run the project, please make use you python evironment is > 2.7
 
-Before you use zodiac_web, I recommand you to use [virtualenv](https://virtualenv.pypa.io/en/stable/) to  create an isolated 'virtual' python environments for the project.
+Before you use zodiac_web, I recommand you to use [virtualenv](https://virtualenv.pypa.io/en/stable/) to  create an isolated 'virtual' python environment for the project.
 
 ### Install virtualenv
 
