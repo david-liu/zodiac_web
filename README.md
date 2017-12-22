@@ -33,9 +33,25 @@ $ pip install -r requirements.txt
 
 When the evironemtn is ready, you can generate  a web application with `create_app.py` 
 
-you can use `./create_app.py --help`  or `python create_app.py --help` to learn about the command.
+you can use `./create_app.py --help`  or `python create_app.py --help` to learn about the command, and the usage will been printed in the console.
 
+```sh
+Usage: create_app.py [OPTIONS] NAME
 
+Options:
+  --force         whether to override the existed directory or not
+  --path TEXT     directory to create the app
+  --port INTEGER  Port for the app
+  --help          Show this message and exit.
+```
+
+For example, if you want to create a new web application named `helloword_app` in the your home path, you can run the following command
+
+```sh
+./create_app.py --path ~ helloword_app
+```
+
+then a fold `helloword_app` with create in your home path.
 
 ## Usage
 
