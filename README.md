@@ -1,5 +1,5 @@
 # zodiac_web
-A Python Web generator, which aims to help user deploying his code as a web serivce quickly.
+A Python Web generator, which aims to help user deploying his code as a web apoplication quickly.
 
 ## Installation
 
@@ -9,22 +9,28 @@ Before you use zodiac_web, I recommand you to use [vitualenv](https://virtualenv
 
 ### Install virtualenv
 
-```
+```sh
 [sudo] pip install virtualenv
 ```
 
 ### Create and active the 'virtual' python environments
 
-```
-virtualenv .env
+
+```sh
+$ virtualenv .env
+$ source .env/bin/active
 ```
 
-```
-source .env/bin/active
-```
+### Install the dependencies
 
-### install the dependencies
-
-```
+```sh
 $ pip install -r requirements.txt
 ```
+
+
+## Generate a web application
+
+When the evironemtn is ready, you can generate to a web application with `create_app.py` 
+
+you can use `./create_app.py --help`  or `python create_app.py --help` to learn about the command.
+
