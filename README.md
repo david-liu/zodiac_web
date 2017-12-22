@@ -13,7 +13,7 @@ Before you use zodiac_web, I recommand you to use [virtualenv](https://virtualen
 $ [sudo] pip install virtualenv
 ```
 
-### Create and active the 'virtual' python environments
+### Create and active a 'virtual' python environment
 
 
 ```sh
