@@ -1,6 +1,6 @@
 # zodiac web
 
-Zodiac web is a Python package for creating beautiful web service interfaces for exsited python code in a composable way with as little code as necessary. 
+Zodiac web is a Python package for creating beautiful web service interfaces for exsited python code in a composable way with as little code as necessary. It's also can support to deploy the service in a docker image without any code.
 
 ## Installation
 
