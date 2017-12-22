@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ==============================================================================
-IMAGE_NAME=gbsc/{app_name}
+IMAGE_NAME=zodiac_web/{app_name}
 
 echo "1. remove all container of image: $IMAGE_NAME"
 docker ps -a | awk '{ print $1,$2 }' | grep $IMAGE_NAME | awk '{print $1 }' | xargs -I {} docker rm -f {}

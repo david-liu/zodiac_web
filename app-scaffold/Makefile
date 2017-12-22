@@ -13,7 +13,7 @@ docker-build:
 	./scripts/build_docker
 
 docker-run-it:
-	docker run -it -p {port}:{port}  gbsc/{app_name}
+	docker run -it -p {port}:{port}  zodiac_web/{app_name}
 
 docker-run:
-	docker run -d -p {port}:{port}  gbsc/{app_name}
+	docker run -d -p {port}:{port}  zodiac_web/{app_name}
